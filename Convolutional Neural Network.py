@@ -1,8 +1,3 @@
-"""
-Created on Thu Jun 24 15:59:36 2021
-
-@author: Marcos.Coca
-"""
 #Importing Libraries
 
 import tensorflow as tf
@@ -19,7 +14,7 @@ train_datagen = ImageDataGenerator(
     horizontal_flip = True)
 
 training_set = train_datagen.flow_from_directory(
-    '/Assets/training_set',
+    'Assets/training_set',
     target_size = (64, 64),
     batch_size = 32,
     class_mode = 'binary')
@@ -28,7 +23,7 @@ training_set = train_datagen.flow_from_directory(
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
 test_set = test_datagen.flow_from_directory(
-    '/Assets/test_set',
+    'Assets/test_set',
     target_size = (64, 64),
     batch_size = 32,
     class_mode = 'binary')
